@@ -99,7 +99,7 @@ bool Kesir::operator>=(const Kesir& d) const {
     return !(*this < d);
 }
 void Kesir::Sadelestir() {
-    // Öklid algoritmasýný kullanarak pay ve payda deðerlerini sadeleþtirir.
+   
     int a = pay_;
     int b = payda_;
     while (b != 0) {
@@ -107,45 +107,17 @@ void Kesir::Sadelestir() {
         a = b;
         b = r;
     }
-    int gcd = a;  // a ve b'nin en büyük ortak bölenidir (gcd).
+    int gcd = a;  // EBOB gcd
     pay_ /= gcd;
     payda_ /= gcd;
 }
 
 
-//Kesir Kesir::YaklasikDeger(double x) {
-//    // Ýlk önce x'in mutlak deðerine bakalým.
-//    bool isNegative = (x < 0);
-//    x = fabs(x);
-//
-//    // Ýki rasyonel sayý arasýndaki farký kontrol edecek bir deðiþken.
-//    double epsilon = 1e-6;
-//
-//    // x'in mutlak deðeri ile 0 arasýndaki fark azsa, 0'ý döndürelim.
-//    if (x < epsilon) return Kesir(0, 1);
-//
-//    // x'in mutlak deðeri ile 1 arasýndaki fark azsa, 1'i döndürelim.
-//    if (x > 1.0 - epsilon) return Kesir(1, 1);
-//
-//    // x'in mutlak deðerinin küsüratlý karþýlýðýný bulalým.
-//    int pay = x * 1000000;  // Örnek için 1000000 kullandýk.
-//    int payda = 1000000;    // Örnek için 1000000 kullandýk.
-//
-//    // x'in mutlak deðerinin küsüratlý karþýlýðý ile x arasýndaki fark azsa,
-//    // küsüratlý karþý
-//}
+
 int main()
 {
-    /*Kesir a(5, 30);
-    Kesir b(7, 6);
-    Kesir c = a + b;
-    cout << c;
-    c.Sadelestir();
-    cout << endl;
-    cout << c;*/
-    Kesir k;
-    cin >> k;
-    cout << k;
+    
+  
     return 0;
 }
 
