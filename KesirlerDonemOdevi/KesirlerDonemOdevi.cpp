@@ -50,12 +50,12 @@ public:
     bool operator>=(const Kesir& d) const;
     //Sadelestirme
     void Sadelestir();
-    //Yaklasýk deger bulmak
+   
     static Kesir YaklasikDeger(double x);
 
 private:
-    int pay_;  // Pay deðiþkeni.
-    int payda_;  // Payda deðiþkeni.
+    int pay_;  
+    int payda_;  
 };
 std::istream& operator>>(std::istream& in, Kesir& r) {
     // Girdi islemini gerçeklestirir.
@@ -72,30 +72,30 @@ std::ostream& operator<<(std::ostream& out, const Kesir& r) {
     return out;
 }
 bool Kesir::operator==(const Kesir& d) const {
-    // Eþitlik karsilastitmasi gerçeklestirir.
+    
     return pay_ * d.payda_ == d.pay_ * payda_;
 }
 
 bool Kesir::operator!=(const Kesir& d) const {
-    // Eþit deðil karþýlaþtýrmasýný gerçekleþtirir.
+   
     return !(*this == d);
 }
 bool Kesir::operator<(const Kesir& d) const {
-    // Küçük karþýlaþtýrmasýný gerçekleþtirir.
+    
     return pay_ * d.payda_ < d.pay_* payda_;
 }
 
 bool Kesir::operator>(const Kesir& d) const {
-    // Büyük karþýlaþtýrmasýný gerçekleþtirir.
+   
     return d < *this;
 }
 bool Kesir::operator<=(const Kesir& d) const {
-    // Küçük veya eþit karþýlaþtýrmasýný gerçekleþtirir.
+    
     return !(d < *this);
 }
 
 bool Kesir::operator>=(const Kesir& d) const {
-    // Büyük veya eþit karþýlaþtýrmasýný gerçekleþtirir.
+   
     return !(*this < d);
 }
 void Kesir::Sadelestir() {
